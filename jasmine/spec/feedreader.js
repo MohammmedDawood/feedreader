@@ -53,7 +53,7 @@ $(function() {
 
 
     /* TODO: Write a new test suite named "The menu" */
-    describe('The menu',function() {
+    describe('The menu', function() {
         const element = document.getElementsByTagName('body')[0].classList;
         const menuElement = $('.menu-icon-link');
         /* TODO: Write a test that ensures the menu element is
@@ -61,7 +61,7 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-        it('menu element hidden by default',function() {
+        it('menu element hidden by default', function() {
             expect(element.contains('menu-hidden')).toBe(true);
         });
          /* TODO: Write a test that ensures the menu changes
@@ -77,7 +77,7 @@ $(function() {
         });
     });
     /* TODO: Write a new test suite named "Initial Entries" */
-    describe('Initial Entries',function(){
+    describe('Initial Entries', function(){
 
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -85,7 +85,7 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-        beforeEach(function (done) {
+        beforeEach(function(done) {
             //set up
             // call something asynchronous
             loadFeed(0,function() {
@@ -97,12 +97,29 @@ $(function() {
             expect($('.feed .entry').length).toBeGreaterThan(0);
             done();
         });
-    });    
+    });
     /* TODO: Write a new test suite named "New Feed Selection" */
+    describe('New Feed Selection', function() {
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-    
+        beforeEach(function(done) {
+            //set up
+            // call something asynchronous
+            $(".feed").empty();
+            loadFeed(0,function() {
+                oldFeed = $('.feed').html();
+                loadFeed(1, function() {
+                    newFeed = $('.feed').html();
+                    done();
+                });
+            });
+        });
+
+        it('when a new feed is loaded by the loadFeed function that the content actually changes',function() {
+            expect(oldFeed).not.toBe(newFeed);
+        });
+    });
 }());
