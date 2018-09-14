@@ -58,4 +58,4 @@ after cloning the project by using `"git clone https://github.com/mahmedtony73/f
 When you open **index.html** file in your browser you will see Jasmine testing window in the footer of the page.
 
 If all specifications are implemented successfully, then you will see the next: "7 specs, 0 failures:
-![game preview](images\preview.PNG "game preview")
+![game preview](https://github.com/mahmedtony73/feedreader/blob/master/images/preview.PNG "game preview")
