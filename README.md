@@ -47,31 +47,15 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 20. When complete - all of your tests should pass. 
 21. Write a README file detailing all steps required to successfully run the application. If you have added additional tests (for Udacious Test Coverage),  provide documentation for what these future features are and what the tests are checking for.
 
-#How to successfully run the application.
+# How to successfully run the application.
 
-after cloning the project bu using **git clone ** or downloading it.
+after cloning the project by using `"git clone https://github.com/mahmedtony73/feedreader.git"` or downloading it.
 
-When you open index.html file in your browser you will see Jasmine testing window in the footer of the page.
+## you can review the project : )
+
+[Click here](https://mahmedtony73.github.io/feedreader/)
+
+When you open **index.html** file in your browser you will see Jasmine testing window in the footer of the page.
 
 If all specifications are implemented successfully, then you will see the next: "7 specs, 0 failures:
-
-RSS Feeds
-
-are defined
-allFeeds has a URL defined and the URL is not empty
-allFeeds has name defined and the name is not empty
-
-Menu
-
-menu element by default is hidden
-the menu displays when clicked and it hides when clicked again
-
-Initial Entries
-
-when the loadFeed is called and completes its work, there is at least a single .entry element within the .feed container
-
-New Feed Selection
-
-when a new feed is loaded the content changes".
-
-Visually it is marked green.
+![game preview](images\preview.PNG "game preview")
